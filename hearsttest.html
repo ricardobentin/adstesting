@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    (function (){
+        window.advBidxc = window.advBidxc || {};
+        window.advBidxc.customerId = "8CU2871MY"; //Customer ID
+        window.advBidxc.domain = window.location.hostname; //Domain Name
+        function loadScript(tagSrc) {
+            if (tagSrc.substr(0, 4) !== 'http') {
+                var isSSL = 'https:' == document.location.protocol;
+                tagSrc = (isSSL ? 'https:' : '') + tagSrc;
+            }
+            var scriptTag = document.createElement('script'), placeTag = document.getElementsByTagName("script")[0];
+            scriptTag.type = 'text/javascript';
+            scriptTag.async = true;
+            scriptTag.src = tagSrc;
+            placeTag.parentNode.insertBefore(scriptTag, placeTag);
+        }
+        var isSSL = 'https:' == document.location.protocol;
+        var mnSrc = (isSSL ? 'https:' : 'http:') + '//hbx.media.net/bxl.js?cid='  + window.advBidxc.customerId + '&dn=' + window.advBidxc.domain + '&version=' +  (isSSL ? '&https=1' : '');
+        loadScript(mnSrc);
+    })();
+</script> 
